@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("EPSInventoryForPC")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Elgin Park Computer Club")]
 [assembly: AssemblyProduct("EPSInventoryForPC")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyCopyright("Copyright ©  2014 Elgin Park Computer Club")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
