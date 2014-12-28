@@ -13,7 +13,7 @@ namespace EPSInventoryForPC
         [STAThread]
         static void Main()
         {
-
+            //kkkk
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
