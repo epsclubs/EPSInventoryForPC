@@ -51,14 +51,14 @@ namespace EPSInventoryForPC
 
         }
 
-        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        private void comboBoxFilter_ViewItems1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+            if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Alert Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Current Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Ideal Storage") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Amount to Purchase"))
+            {
+                comboBoxFilter_ViewItems2.Enabled = true;
+            }
+            else
+                comboBoxFilter_ViewItems2.Enabled = false;
+        } 
     }
 }
