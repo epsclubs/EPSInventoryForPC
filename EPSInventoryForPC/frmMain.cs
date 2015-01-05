@@ -18,7 +18,7 @@ namespace EPSInventoryForPC
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            listViewMain.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -42,6 +42,21 @@ namespace EPSInventoryForPC
         }
 
         private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
