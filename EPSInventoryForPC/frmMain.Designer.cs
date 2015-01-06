@@ -53,6 +53,18 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBoxEditAmount = new System.Windows.Forms.GroupBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.button_EditOK = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtBox_EditAmt = new System.Windows.Forms.TextBox();
+            this.comboBox_EditAmt = new System.Windows.Forms.ComboBox();
             this.listViewMain = new System.Windows.Forms.ListView();
             this.ChemID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ChemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,7 +87,6 @@
             this.cboxFilter_SearchFormula = new System.Windows.Forms.CheckBox();
             this.cboxFilter_SearchName = new System.Windows.Forms.CheckBox();
             this.cboxFilter_SearchChemID = new System.Windows.Forms.CheckBox();
-            this.cboxFilter_SearchAll = new System.Windows.Forms.CheckBox();
             this.buttonFilter_ViewClr = new System.Windows.Forms.Button();
             this.SearchByItems = new System.Windows.Forms.Label();
             this.txtBoxFilter_ViewItems = new System.Windows.Forms.TextBox();
@@ -89,6 +100,10 @@
             this.cboxFilter_StatusAll = new System.Windows.Forms.CheckBox();
             this.buttonFilter_SearchClr = new System.Windows.Forms.Button();
             this.tabPageEdit = new System.Windows.Forms.TabPage();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.buttonEdit_Clear = new System.Windows.Forms.Button();
             this.buttonEdit_Cancel = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
@@ -131,18 +146,11 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBoxEditAmount = new System.Windows.Forms.GroupBox();
-            this.txtBox_EditAmt = new System.Windows.Forms.TextBox();
-            this.comboBox_EditAmt = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.button_EditOK = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBoxEditAmount.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SearchBar.SuspendLayout();
             this.groupBoxViewState.SuspendLayout();
@@ -151,7 +159,6 @@
             this.tabPageEdit.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPageAdd.SuspendLayout();
-            this.groupBoxEditAmount.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -270,6 +277,134 @@
             this.panel1.Size = new System.Drawing.Size(906, 682);
             this.panel1.TabIndex = 0;
             // 
+            // groupBoxEditAmount
+            // 
+            this.groupBoxEditAmount.Controls.Add(this.label27);
+            this.groupBoxEditAmount.Controls.Add(this.label26);
+            this.groupBoxEditAmount.Controls.Add(this.label25);
+            this.groupBoxEditAmount.Controls.Add(this.label20);
+            this.groupBoxEditAmount.Controls.Add(this.button_EditOK);
+            this.groupBoxEditAmount.Controls.Add(this.label21);
+            this.groupBoxEditAmount.Controls.Add(this.label22);
+            this.groupBoxEditAmount.Controls.Add(this.label23);
+            this.groupBoxEditAmount.Controls.Add(this.label24);
+            this.groupBoxEditAmount.Controls.Add(this.txtBox_EditAmt);
+            this.groupBoxEditAmount.Controls.Add(this.comboBox_EditAmt);
+            this.groupBoxEditAmount.Location = new System.Drawing.Point(0, 593);
+            this.groupBoxEditAmount.Name = "groupBoxEditAmount";
+            this.groupBoxEditAmount.Size = new System.Drawing.Size(906, 85);
+            this.groupBoxEditAmount.TabIndex = 3;
+            this.groupBoxEditAmount.TabStop = false;
+            this.groupBoxEditAmount.Text = "Select a chemical and edit its amount";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(220, 55);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(61, 21);
+            this.label27.TabIndex = 22;
+            this.label27.Text = "label27";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(220, 28);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(61, 21);
+            this.label26.TabIndex = 21;
+            this.label26.Text = "label26";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(64, 55);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(61, 21);
+            this.label25.TabIndex = 20;
+            this.label25.Text = "label25";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(74, 28);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(61, 21);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "label20";
+            // 
+            // button_EditOK
+            // 
+            this.button_EditOK.Location = new System.Drawing.Point(777, 28);
+            this.button_EditOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_EditOK.Name = "button_EditOK";
+            this.button_EditOK.Size = new System.Drawing.Size(91, 37);
+            this.button_EditOK.TabIndex = 18;
+            this.button_EditOK.Text = "OK";
+            this.button_EditOK.UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(9, 55);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(48, 21);
+            this.label21.TabIndex = 17;
+            this.label21.Text = "State:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(142, 28);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(71, 21);
+            this.label22.TabIndex = 16;
+            this.label22.Text = "Formula:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(158, 55);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(55, 21);
+            this.label23.TabIndex = 15;
+            this.label23.Text = "Name:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(9, 28);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(69, 21);
+            this.label24.TabIndex = 14;
+            this.label24.Text = "ChemID:";
+            // 
+            // txtBox_EditAmt
+            // 
+            this.txtBox_EditAmt.Location = new System.Drawing.Point(468, 33);
+            this.txtBox_EditAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBox_EditAmt.Name = "txtBox_EditAmt";
+            this.txtBox_EditAmt.Size = new System.Drawing.Size(222, 29);
+            this.txtBox_EditAmt.TabIndex = 10;
+            // 
+            // comboBox_EditAmt
+            // 
+            this.comboBox_EditAmt.FormattingEnabled = true;
+            this.comboBox_EditAmt.Items.AddRange(new object[] {
+            "Consume",
+            "Input Amount",
+            "Purchased Amount"});
+            this.comboBox_EditAmt.Location = new System.Drawing.Point(340, 33);
+            this.comboBox_EditAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBox_EditAmt.Name = "comboBox_EditAmt";
+            this.comboBox_EditAmt.Size = new System.Drawing.Size(105, 29);
+            this.comboBox_EditAmt.TabIndex = 11;
+            this.comboBox_EditAmt.Text = "Comsume";
+            // 
             // listViewMain
             // 
             this.listViewMain.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -283,23 +418,26 @@
             this.ChemAmtPurch,
             this.ChemNote});
             this.listViewMain.FullRowSelect = true;
+            this.listViewMain.GridLines = true;
             this.listViewMain.HoverSelection = true;
             this.listViewMain.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listViewMain.LabelWrap = false;
-            this.listViewMain.Location = new System.Drawing.Point(0, 0);
+            this.listViewMain.Location = new System.Drawing.Point(14, 5);
             this.listViewMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listViewMain.MultiSelect = false;
             this.listViewMain.Name = "listViewMain";
             this.listViewMain.ShowGroups = false;
-            this.listViewMain.Size = new System.Drawing.Size(906, 596);
+            this.listViewMain.Size = new System.Drawing.Size(906, 606);
             this.listViewMain.TabIndex = 2;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
+            this.listViewMain.SelectedIndexChanged += new System.EventHandler(this.listViewMain_SelectedIndexChanged);
             // 
             // ChemID
             // 
             this.ChemID.Text = "Chem ID";
+            this.ChemID.Width = 81;
             // 
             // ChemName
             // 
@@ -455,7 +593,6 @@
             this.groupBoxSearch.Controls.Add(this.cboxFilter_SearchFormula);
             this.groupBoxSearch.Controls.Add(this.cboxFilter_SearchName);
             this.groupBoxSearch.Controls.Add(this.cboxFilter_SearchChemID);
-            this.groupBoxSearch.Controls.Add(this.cboxFilter_SearchAll);
             this.groupBoxSearch.Location = new System.Drawing.Point(0, 82);
             this.groupBoxSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBoxSearch.Name = "groupBoxSearch";
@@ -470,7 +607,7 @@
             this.cboxFilter_SearchFormula.AutoSize = true;
             this.cboxFilter_SearchFormula.Checked = true;
             this.cboxFilter_SearchFormula.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cboxFilter_SearchFormula.Location = new System.Drawing.Point(188, 49);
+            this.cboxFilter_SearchFormula.Location = new System.Drawing.Point(10, 84);
             this.cboxFilter_SearchFormula.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxFilter_SearchFormula.Name = "cboxFilter_SearchFormula";
             this.cboxFilter_SearchFormula.Size = new System.Drawing.Size(87, 25);
@@ -483,7 +620,7 @@
             this.cboxFilter_SearchName.AutoSize = true;
             this.cboxFilter_SearchName.Checked = true;
             this.cboxFilter_SearchName.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cboxFilter_SearchName.Location = new System.Drawing.Point(188, 84);
+            this.cboxFilter_SearchName.Location = new System.Drawing.Point(171, 49);
             this.cboxFilter_SearchName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxFilter_SearchName.Name = "cboxFilter_SearchName";
             this.cboxFilter_SearchName.Size = new System.Drawing.Size(71, 25);
@@ -496,26 +633,13 @@
             this.cboxFilter_SearchChemID.AutoSize = true;
             this.cboxFilter_SearchChemID.Checked = true;
             this.cboxFilter_SearchChemID.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cboxFilter_SearchChemID.Location = new System.Drawing.Point(10, 84);
+            this.cboxFilter_SearchChemID.Location = new System.Drawing.Point(10, 49);
             this.cboxFilter_SearchChemID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboxFilter_SearchChemID.Name = "cboxFilter_SearchChemID";
             this.cboxFilter_SearchChemID.Size = new System.Drawing.Size(85, 25);
             this.cboxFilter_SearchChemID.TabIndex = 1;
             this.cboxFilter_SearchChemID.Text = "ChemID";
             this.cboxFilter_SearchChemID.UseVisualStyleBackColor = true;
-            // 
-            // cboxFilter_SearchAll
-            // 
-            this.cboxFilter_SearchAll.AutoSize = true;
-            this.cboxFilter_SearchAll.Checked = true;
-            this.cboxFilter_SearchAll.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cboxFilter_SearchAll.Location = new System.Drawing.Point(10, 49);
-            this.cboxFilter_SearchAll.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cboxFilter_SearchAll.Name = "cboxFilter_SearchAll";
-            this.cboxFilter_SearchAll.Size = new System.Drawing.Size(45, 25);
-            this.cboxFilter_SearchAll.TabIndex = 0;
-            this.cboxFilter_SearchAll.Text = "all";
-            this.cboxFilter_SearchAll.UseVisualStyleBackColor = true;
             // 
             // buttonFilter_ViewClr
             // 
@@ -664,6 +788,10 @@
             // 
             // tabPageEdit
             // 
+            this.tabPageEdit.Controls.Add(this.label31);
+            this.tabPageEdit.Controls.Add(this.label30);
+            this.tabPageEdit.Controls.Add(this.label29);
+            this.tabPageEdit.Controls.Add(this.label28);
             this.tabPageEdit.Controls.Add(this.buttonEdit_Clear);
             this.tabPageEdit.Controls.Add(this.buttonEdit_Cancel);
             this.tabPageEdit.Controls.Add(this.label18);
@@ -693,6 +821,42 @@
             this.tabPageEdit.Text = "Edit";
             this.tabPageEdit.UseVisualStyleBackColor = true;
             this.tabPageEdit.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(86, 106);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(61, 21);
+            this.label31.TabIndex = 24;
+            this.label31.Text = "label31";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(86, 85);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(61, 21);
+            this.label30.TabIndex = 23;
+            this.label30.Text = "label30";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(86, 64);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(61, 21);
+            this.label29.TabIndex = 22;
+            this.label29.Text = "label29";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(86, 43);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(61, 21);
+            this.label28.TabIndex = 21;
+            this.label28.Text = "label28";
             // 
             // buttonEdit_Clear
             // 
@@ -820,7 +984,7 @@
             this.comboEdit.FormattingEnabled = true;
             this.comboEdit.Items.AddRange(new object[] {
             "Purchase",
-            "Comsume"});
+            "Consume"});
             this.comboEdit.Location = new System.Drawing.Point(78, 206);
             this.comboEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.comboEdit.Name = "comboEdit";
@@ -1116,93 +1280,6 @@
             this.label11.TabIndex = 12;
             this.label11.Text = "Chem Name";
             // 
-            // groupBoxEditAmount
-            // 
-            this.groupBoxEditAmount.Controls.Add(this.button_EditOK);
-            this.groupBoxEditAmount.Controls.Add(this.label21);
-            this.groupBoxEditAmount.Controls.Add(this.label22);
-            this.groupBoxEditAmount.Controls.Add(this.label23);
-            this.groupBoxEditAmount.Controls.Add(this.label24);
-            this.groupBoxEditAmount.Controls.Add(this.txtBox_EditAmt);
-            this.groupBoxEditAmount.Controls.Add(this.comboBox_EditAmt);
-            this.groupBoxEditAmount.Location = new System.Drawing.Point(0, 593);
-            this.groupBoxEditAmount.Name = "groupBoxEditAmount";
-            this.groupBoxEditAmount.Size = new System.Drawing.Size(906, 85);
-            this.groupBoxEditAmount.TabIndex = 3;
-            this.groupBoxEditAmount.TabStop = false;
-            this.groupBoxEditAmount.Text = "Select a chemical and edit its amount";
-            // 
-            // txtBox_EditAmt
-            // 
-            this.txtBox_EditAmt.Location = new System.Drawing.Point(468, 33);
-            this.txtBox_EditAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtBox_EditAmt.Name = "txtBox_EditAmt";
-            this.txtBox_EditAmt.Size = new System.Drawing.Size(222, 29);
-            this.txtBox_EditAmt.TabIndex = 10;
-            // 
-            // comboBox_EditAmt
-            // 
-            this.comboBox_EditAmt.FormattingEnabled = true;
-            this.comboBox_EditAmt.Items.AddRange(new object[] {
-            "Purchase",
-            "Comsume"});
-            this.comboBox_EditAmt.Location = new System.Drawing.Point(340, 33);
-            this.comboBox_EditAmt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox_EditAmt.Name = "comboBox_EditAmt";
-            this.comboBox_EditAmt.Size = new System.Drawing.Size(105, 29);
-            this.comboBox_EditAmt.TabIndex = 11;
-            this.comboBox_EditAmt.Text = "Comsume";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(9, 55);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(48, 21);
-            this.label21.TabIndex = 17;
-            this.label21.Text = "State:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(142, 28);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 21);
-            this.label22.TabIndex = 16;
-            this.label22.Text = "Formula:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(158, 55);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(55, 21);
-            this.label23.TabIndex = 15;
-            this.label23.Text = "Name:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(9, 28);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(69, 21);
-            this.label24.TabIndex = 14;
-            this.label24.Text = "ChemID:";
-            // 
-            // button_EditOK
-            // 
-            this.button_EditOK.Location = new System.Drawing.Point(777, 28);
-            this.button_EditOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_EditOK.Name = "button_EditOK";
-            this.button_EditOK.Size = new System.Drawing.Size(91, 37);
-            this.button_EditOK.TabIndex = 18;
-            this.button_EditOK.Text = "OK";
-            this.button_EditOK.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -1226,6 +1303,8 @@
             this.statusStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.groupBoxEditAmount.ResumeLayout(false);
+            this.groupBoxEditAmount.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.SearchBar.ResumeLayout(false);
             this.SearchBar.PerformLayout();
@@ -1241,8 +1320,6 @@
             this.tabPage4.PerformLayout();
             this.tabPageAdd.ResumeLayout(false);
             this.tabPageAdd.PerformLayout();
-            this.groupBoxEditAmount.ResumeLayout(false);
-            this.groupBoxEditAmount.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1286,7 +1363,6 @@
         private System.Windows.Forms.CheckBox cboxFilter_SearchFormula;
         private System.Windows.Forms.CheckBox cboxFilter_SearchName;
         private System.Windows.Forms.CheckBox cboxFilter_SearchChemID;
-        private System.Windows.Forms.CheckBox cboxFilter_SearchAll;
         private System.Windows.Forms.Button buttonFilter_ViewClr;
         private System.Windows.Forms.Label SearchByItems;
         private System.Windows.Forms.TextBox txtBoxFilter_ViewItems;
@@ -1350,6 +1426,14 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtBox_EditAmt;
         private System.Windows.Forms.ComboBox comboBox_EditAmt;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
 
     }
 }
