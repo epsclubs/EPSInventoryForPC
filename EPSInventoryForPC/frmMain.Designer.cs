@@ -38,7 +38,7 @@
             "1231",
             "23432",
             "123124",
-            "12412"}, -1);
+            "12412"}, -1, System.Drawing.Color.Black, System.Drawing.Color.Empty, null);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.ePSInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +75,7 @@
             this.ChemIdealAmt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ChemAmtPurch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ChemNote = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ChemWhrToPurchase = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.SearchBar = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
@@ -416,19 +417,20 @@
             this.ChemAlertAmt,
             this.ChemIdealAmt,
             this.ChemAmtPurch,
-            this.ChemNote});
+            this.ChemNote,
+            this.ChemWhrToPurchase});
             this.listViewMain.FullRowSelect = true;
             this.listViewMain.GridLines = true;
             this.listViewMain.HoverSelection = true;
             this.listViewMain.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
             this.listViewMain.LabelWrap = false;
-            this.listViewMain.Location = new System.Drawing.Point(14, 5);
+            this.listViewMain.Location = new System.Drawing.Point(14, 30);
             this.listViewMain.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.listViewMain.MultiSelect = false;
             this.listViewMain.Name = "listViewMain";
             this.listViewMain.ShowGroups = false;
-            this.listViewMain.Size = new System.Drawing.Size(906, 606);
+            this.listViewMain.Size = new System.Drawing.Size(906, 581);
             this.listViewMain.TabIndex = 2;
             this.listViewMain.UseCompatibleStateImageBehavior = false;
             this.listViewMain.View = System.Windows.Forms.View.Details;
@@ -473,7 +475,14 @@
             // 
             // ChemNote
             // 
+            this.ChemNote.DisplayIndex = 9;
             this.ChemNote.Text = "Note";
+            // 
+            // ChemWhrToPurchase
+            // 
+            this.ChemWhrToPurchase.DisplayIndex = 8;
+            this.ChemWhrToPurchase.Text = "Where to Purchase the Chemical";
+            this.ChemWhrToPurchase.Width = 120;
             // 
             // tabControl1
             // 
@@ -1434,6 +1443,7 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ColumnHeader ChemWhrToPurchase;
 
     }
 }

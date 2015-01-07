@@ -16,7 +16,7 @@ namespace EPSInventoryForPC
             InitializeComponent();
         }
 
-        private void disableComponents()
+        private void disableComponentsForEditing()
         {
             comboBox_EditAmt.Enabled = false;
             txtBox_EditAmt.Enabled = false;
@@ -30,7 +30,7 @@ namespace EPSInventoryForPC
             comboEdit.Enabled = false;
         }
 
-        private void enableComponents()
+        private void enableComponentsForEditing()
         {
             comboBox_EditAmt.Enabled = true;
             txtBox_EditAmt.Enabled = true;
@@ -47,7 +47,7 @@ namespace EPSInventoryForPC
         private void frmMain_Load(object sender, EventArgs e)
         {
             listViewMain.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
-            disableComponents();
+            disableComponentsForEditing();
         }
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -82,7 +82,8 @@ namespace EPSInventoryForPC
 
         private void comboBoxFilter_ViewItems1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Alert Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Current Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Ideal Storage") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Amount to Purchase"))
+            if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Alert Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Current Amount") || 
+                comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Ideal Storage") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Amount to Purchase"))
             {
                 comboBoxFilter_ViewItems2.Enabled = true;
             }
@@ -94,11 +95,11 @@ namespace EPSInventoryForPC
         {
             if (listViewMain.SelectedItems.Count != 0)
             {
-                enableComponents();
+                enableComponentsForEditing();
             }
             else
             {
-                disableComponents();
+                disableComponentsForEditing();
             }
         }
 
