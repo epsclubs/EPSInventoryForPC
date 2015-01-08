@@ -13,10 +13,10 @@ namespace EPSInventoryForPC
     }
     public class Chemical
     {
-        private readonly string _chemID {get;}
-        private readonly string _chemName { get; }
-        private readonly string _chemFormula { get; }
-        private readonly ChemState _state { get; }
+        private string _chemID;
+        private string _chemName;
+        private string _chemFormula;
+        private ChemState _state;
 
         private double currAmt { get; set; }
         private double alertAmt { get; set; }
@@ -37,12 +37,12 @@ namespace EPSInventoryForPC
         /// <param name="alertamt"></param>
         /// <param name="idealamt"></param>
         /// <param name="note"></param>
+        
         //public Chemical (string chemid, string chemname, string chemformula, ChemState steate, double curramt, double alertamt, double idealamt, string note = "")
         //{
         //    this._chemID = chemid;
         //    this._chemName = chemname;
         //    this._chemFormula = chemformula;
-
         //}
 
         //private void initReadOnlyAttributes(string chemid, string chemname, string chemformula, ChemState steate, double curramt, double alertamt, out double idealamt, out string note = "")

@@ -343,6 +343,7 @@
             this.button_EditOK.TabIndex = 18;
             this.button_EditOK.Text = "OK";
             this.button_EditOK.UseVisualStyleBackColor = true;
+            this.button_EditOK.Click += new System.EventHandler(this.button_EditOK_Click);
             // 
             // label21
             // 
@@ -357,7 +358,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(142, 28);
+            this.label22.Location = new System.Drawing.Point(142, 55);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(71, 21);
@@ -367,7 +368,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(158, 55);
+            this.label23.Location = new System.Drawing.Point(158, 30);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(55, 21);
@@ -404,7 +405,7 @@
             this.comboBox_EditAmt.Name = "comboBox_EditAmt";
             this.comboBox_EditAmt.Size = new System.Drawing.Size(105, 29);
             this.comboBox_EditAmt.TabIndex = 11;
-            this.comboBox_EditAmt.Text = "Comsume";
+            this.comboBox_EditAmt.Text = "Consume";
             // 
             // listViewMain
             // 
@@ -685,6 +686,7 @@
             this.txtFilter_Search.Name = "txtFilter_Search";
             this.txtFilter_Search.Size = new System.Drawing.Size(275, 29);
             this.txtFilter_Search.TabIndex = 0;
+            this.txtFilter_Search.TextChanged += new System.EventHandler(this.filterTextChanged);
             // 
             // comboBoxFilter_ViewItems2
             // 
