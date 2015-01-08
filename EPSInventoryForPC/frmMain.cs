@@ -140,41 +140,169 @@ namespace EPSInventoryForPC
 
         private void filterTextChanged(object sender, EventArgs e)
         {
-            var items = new ListView.ListViewItemCollection(listViewMain);
-            if (cboxFilter_SearchChemID.Checked)
+            //Reload the full listViewMain.Items list
+
+            //Filter when all three checkBoxes are checked
+            if (cboxFilter_SearchChemID.Checked && cboxFilter_SearchFormula.Checked && cboxFilter_SearchName.Checked)
             {
+                int[] arg = new int[listViewMain.Items.Count];
                 for (int i = 0; i < listViewMain.Items.Count; i++)
                 {
-                    if (listViewMain.Items[i].SubItems[0].Text.Contains(txtFilter_Search.Text))
+                    if (listViewMain.Items[i].SubItems[0].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
                     {
-                        items.Add(listViewMain.Items[i]);
+                        arg[i]++;
                     }
-                }   
+                }
+           
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[1].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        arg[i]++;
+                    }
+                }
+         
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[2].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        arg[i]++;
+                    }
+                }
+
+                for(int i=0;i<listViewMain.Items.Count;i++){
+                    if (arg[i] == 3)
+                    {
+                        listViewMain.Items[i].Remove();
+                    }
+                }
             }
 
-            if (cboxFilter_SearchName.Checked)
+            //filter when both ChemID and Formula are checked
+            else if (cboxFilter_SearchChemID.Checked && cboxFilter_SearchFormula.Checked)
             {
+                int[] arg = new int[listViewMain.Items.Count];
                 for (int i = 0; i < listViewMain.Items.Count; i++)
                 {
-                    if (listViewMain.Items[i].SubItems[0].Text.Contains(txtFilter_Search.Text))
+                    if (listViewMain.Items[i].SubItems[0].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
                     {
-                        items.Add(listViewMain.Items[i]);
+                        arg[i]++;
+                    }
+                }
+
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[2].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        arg[i]++;
+                    }
+                }
+
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (arg[i] == 2)
+                    {
+                        listViewMain.Items[i].Remove();
                     }
                 }
             }
             
-            if (cboxFilter_SearchFormula.Checked)
+            //filter when both ChemID and Name are checked
+            else if (cboxFilter_SearchChemID.Checked && cboxFilter_SearchName.Checked)
             {
+                int[] arg = new int[listViewMain.Items.Count];
                 for (int i = 0; i < listViewMain.Items.Count; i++)
                 {
-                    if (listViewMain.Items[i].SubItems[0].Text.Contains(txtFilter_Search.Text))
+                    if (listViewMain.Items[i].SubItems[0].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
                     {
-                        items.Add(listViewMain.Items[i]);
+                        arg[i]++;
+                    }
+                }
+
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[1].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        arg[i]++;
+                    }
+                }
+
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (arg[i] == 2)
+                    {
+                        listViewMain.Items[i].Remove();
                     }
                 }
             }
 
+            //filter when both Formula and Name are checked
+            else if (cboxFilter_SearchFormula.Checked && cboxFilter_SearchName.Checked)
+            {
+                int[] arg = new int[listViewMain.Items.Count];
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[2].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        arg[i]++;
+                    }
+                }
+
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[1].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        arg[i]++;
+                    }
+                }
+
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (arg[i] == 2)
+                    {
+                        listViewMain.Items[i].Remove();
+                    }
+                }
+            }
             
+            //filter when only ChemID is checked
+            else if (cboxFilter_SearchChemID.Checked)
+            {
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[0].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        listViewMain.Items[i].Remove();
+                    }
+                }
+            }
+
+            //filter when only Formula is checked
+            else if (cboxFilter_SearchFormula.Checked)
+            {
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[2].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        listViewMain.Items[i].Remove();
+                    }
+                }
+            }
+
+            //filter when only Name is checked
+            else if (cboxFilter_SearchName.Checked)
+            {
+                for (int i = 0; i < listViewMain.Items.Count; i++)
+                {
+                    if (listViewMain.Items[i].SubItems[1].Text.ToLower().Contains(txtFilter_Search.Text.ToLower()) == false)
+                    {
+                        listViewMain.Items[i].Remove();
+                    }
+                }
+            }
+
+            //end of filter
+
         }
 
 
