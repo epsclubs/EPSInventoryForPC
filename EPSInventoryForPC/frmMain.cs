@@ -72,7 +72,7 @@ namespace EPSInventoryForPC
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            listViewMain.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewMain.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             disableComponentsForEditing();
         }
 
@@ -103,13 +103,13 @@ namespace EPSInventoryForPC
 
         private void comboBoxFilter_ViewItems1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Alert Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Current Amount") ||
-                comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Ideal Storage") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Amount to Purchase"))
-            {
-                comboBoxFilter_ViewItems2.Enabled = true;
-            }
-            else
-                comboBoxFilter_ViewItems2.Enabled = false;
+            //if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Alert Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Current Amount") ||
+            //    comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Ideal Storage") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Amount to Purchase"))
+            //{
+            //    comboBoxFilter_ViewItems2.Enabled = true;
+            //}
+            //else
+            //    comboBoxFilter_ViewItems2.Enabled = false;
         }
 
         private void listViewMain_SelectedIndexChanged(object sender, EventArgs e)
