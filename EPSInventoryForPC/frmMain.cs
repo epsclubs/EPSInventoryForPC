@@ -140,7 +140,7 @@ namespace EPSInventoryForPC
 
         private void filterTextChanged(object sender, EventArgs e)
         {
-            //Reload the full listViewMain.Items list
+            //Reload the full, listViewMain.Items listViewMain.Items 
 
             //Filter when all three checkBoxes are checked
             if (cboxFilter_SearchChemID.Checked && cboxFilter_SearchFormula.Checked && cboxFilter_SearchName.Checked)
