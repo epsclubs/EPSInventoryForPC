@@ -17,8 +17,13 @@ namespace EPSInventoryForPC
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
 
+
+            var _frmLogin = new frmLogin();
+            _frmLogin.Show();
+            Application.Run();
+
+            Console.WriteLine("Exiting");
         }
     }
 }
