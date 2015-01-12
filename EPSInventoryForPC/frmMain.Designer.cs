@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "1231241",
             "12",
             "23",
@@ -61,13 +61,13 @@
             this.headerChemState = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headerChemGroup = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headerChemSafetyTag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.headerChemIsNeedToPurchase = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headerChemCurAmt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headerChemAlertAmt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headerChemIdealAmt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headerChemAmtPurch = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.headerIsWishToBuy = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.headerChemWhrToPurchase = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.headerChemNote = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.headerChemNotes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBoxEditAmount = new System.Windows.Forms.GroupBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
@@ -314,19 +314,19 @@
             this.headerChemState,
             this.headerChemGroup,
             this.headerChemSafetyTag,
+            this.headerChemIsNeedToPurchase,
             this.headerChemCurAmt,
             this.headerChemAlertAmt,
             this.headerChemIdealAmt,
             this.headerChemAmtPurch,
-            this.headerIsWishToBuy,
             this.headerChemWhrToPurchase,
-            this.headerChemNote});
+            this.headerChemNotes});
             this.listViewMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewMain.FullRowSelect = true;
             this.listViewMain.GridLines = true;
             this.listViewMain.HoverSelection = true;
             this.listViewMain.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listViewMain.LabelWrap = false;
             this.listViewMain.Location = new System.Drawing.Point(3, 4);
             this.listViewMain.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -363,39 +363,44 @@
             // headerChemSafetyTag
             // 
             this.headerChemSafetyTag.Text = "Safety Tag";
+            this.headerChemSafetyTag.Width = 86;
+            // 
+            // headerChemIsNeedToPurchase
+            // 
+            this.headerChemIsNeedToPurchase.Text = "Need To Purchase";
+            this.headerChemIsNeedToPurchase.Width = 100;
             // 
             // headerChemCurAmt
             // 
+            this.headerChemCurAmt.DisplayIndex = 10;
             this.headerChemCurAmt.Text = "Current Amount";
-            this.headerChemCurAmt.Width = 100;
             // 
             // headerChemAlertAmt
             // 
+            this.headerChemAlertAmt.DisplayIndex = 7;
             this.headerChemAlertAmt.Text = "Alert Amount";
             this.headerChemAlertAmt.Width = 100;
             // 
             // headerChemIdealAmt
             // 
+            this.headerChemIdealAmt.DisplayIndex = 8;
             this.headerChemIdealAmt.Text = "Ideal Storage";
             this.headerChemIdealAmt.Width = 100;
             // 
             // headerChemAmtPurch
             // 
+            this.headerChemAmtPurch.DisplayIndex = 9;
             this.headerChemAmtPurch.Text = "Amount To Purchase";
             this.headerChemAmtPurch.Width = 117;
-            // 
-            // headerIsWishToBuy
-            // 
-            this.headerIsWishToBuy.Text = "Is Wish to Buy";
             // 
             // headerChemWhrToPurchase
             // 
             this.headerChemWhrToPurchase.Text = "Where to Buy";
             this.headerChemWhrToPurchase.Width = 120;
             // 
-            // headerChemNote
+            // headerChemNotes
             // 
-            this.headerChemNote.Text = "Note";
+            this.headerChemNotes.Text = "Notes";
             // 
             // groupBoxEditAmount
             // 
@@ -813,13 +818,6 @@
             // comboBoxFilter_ViewItems2
             // 
             this.comboBoxFilter_ViewItems2.FormattingEnabled = true;
-            this.comboBoxFilter_ViewItems2.Items.AddRange(new object[] {
-            "=",
-            ">",
-            ">=",
-            "<",
-            "<=",
-            "!="});
             this.comboBoxFilter_ViewItems2.Location = new System.Drawing.Point(122, 490);
             this.comboBoxFilter_ViewItems2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxFilter_ViewItems2.Name = "comboBoxFilter_ViewItems2";
@@ -830,11 +828,10 @@
             // 
             this.comboBoxFilter_ViewItems1.FormattingEnabled = true;
             this.comboBoxFilter_ViewItems1.Items.AddRange(new object[] {
-            "ChemID",
-            "Current Amt",
-            "Alert Amt",
-            "Ideal Storage",
-            "Amt to Purchase"});
+            "Group",
+            "Safety Tag",
+            "Need to Purchase",
+            "Where to Buy"});
             this.comboBoxFilter_ViewItems1.Location = new System.Drawing.Point(3, 491);
             this.comboBoxFilter_ViewItems1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBoxFilter_ViewItems1.Name = "comboBoxFilter_ViewItems1";
@@ -1473,11 +1470,11 @@
         private System.Windows.Forms.ColumnHeader headerChemName;
         private System.Windows.Forms.ColumnHeader headerChemFormula;
         private System.Windows.Forms.ColumnHeader headerChemState;
-        private System.Windows.Forms.ColumnHeader headerChemCurAmt;
+        private System.Windows.Forms.ColumnHeader headerChemIsNeedToPurchase;
         private System.Windows.Forms.ColumnHeader headerChemAlertAmt;
         private System.Windows.Forms.ColumnHeader headerChemIdealAmt;
         private System.Windows.Forms.ColumnHeader headerChemAmtPurch;
-        private System.Windows.Forms.ColumnHeader headerChemNote;
+        private System.Windows.Forms.ColumnHeader headerChemNotes;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripTextBox toolStripAboutText;
         private System.Windows.Forms.TabControl tabControl1;
@@ -1563,22 +1560,22 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label28;
-<<<<<<< HEAD
+
         private System.Windows.Forms.ColumnHeader ChemWhrToPurchase;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-=======
+
         private System.Windows.Forms.ColumnHeader headerChemWhrToPurchase;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ColumnHeader headerChemGroup;
         private System.Windows.Forms.ColumnHeader headerChemSafetyTag;
-        private System.Windows.Forms.ColumnHeader headerIsWishToBuy;
+        private System.Windows.Forms.ColumnHeader headerChemCurAmt;
         private System.Windows.Forms.CheckBox cboxFilter_Note;
         private System.Windows.Forms.CheckBox cboxFilter_WhrToPur;
         private System.Windows.Forms.CheckBox cboxFilter_SafetyTag;
         private System.Windows.Forms.CheckBox cboxFilter_Group;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label lblLogicAlert;
->>>>>>> origin/Parin
+
 
     }
 }

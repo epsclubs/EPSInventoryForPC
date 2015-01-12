@@ -72,7 +72,12 @@ namespace EPSInventoryForPC
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            listViewMain.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewMain.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
+            listViewMain.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewMain.AutoResizeColumn(1, ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewMain.AutoResizeColumn(3, ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewMain.AutoResizeColumn(4, ColumnHeaderAutoResizeStyle.ColumnContent);
+            listViewMain.AutoResizeColumn(5, ColumnHeaderAutoResizeStyle.ColumnContent);
             disableComponentsForEditing();
         }
 
@@ -103,13 +108,28 @@ namespace EPSInventoryForPC
 
         private void comboBoxFilter_ViewItems1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Alert Amount") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Current Amount") ||
-                comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Ideal Storage") || comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Amount to Purchase"))
+            comboBoxFilter_ViewItems2.Items.Clear();
+            comboBoxFilter_ViewItems2.Enabled = false;
+            
+            //if the selected item for comboBox1 is Group
+            if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Group"))
             {
                 comboBoxFilter_ViewItems2.Enabled = true;
+                comboBoxFilter_ViewItems2.Items.Add("");
             }
-            else
-                comboBoxFilter_ViewItems2.Enabled = false;
+            //else if the selected item for comboBox1 is Safety Tag
+            else if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Safety Tag"))
+            {
+                comboBoxFilter_ViewItems2.Enabled = true;
+                comboBoxFilter_ViewItems2.Items.Add("Flammable");
+            }
+            //else if the selected item for combobox 1 is Where to Buy
+            else if (comboBoxFilter_ViewItems1.SelectedItem.ToString().Equals("Where to Buy"))
+            {
+                comboBoxFilter_ViewItems2.Enabled = true;
+                comboBoxFilter_ViewItems2.Items.Add("");
+            }
+
         }
 
         private void listViewMain_SelectedIndexChanged(object sender, EventArgs e)
@@ -140,7 +160,7 @@ namespace EPSInventoryForPC
 
         private void filterTextChanged(object sender, EventArgs e)
         {
-            //Reload the full, listViewMain.Items listViewMain.Items 
+            //Reload the full listViewItems
 
             //Filter when all three checkBoxes are checked
             if (cboxFilter_SearchChemID.Checked && cboxFilter_SearchFormula.Checked && cboxFilter_SearchName.Checked)
